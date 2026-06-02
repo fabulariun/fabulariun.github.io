@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fabulariun</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#111;
+    color:white;
+}
+
+/* PORTADA */
+
+.hero{
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Cambia esta imagen por una tuya */
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(50%);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+h1{
+    font-size:3rem;
+    letter-spacing:5px;
+
+    margin-bottom:20px;
+}
+
+.subtitulo{
+
+    font-size:1.1rem;
+
+    line-height:1.5;
+
+    max-width:300px;
+
+    margin-bottom:40px;
+
+    color:#ddd;
+}
+
+.boton{
+
+    display:inline-block;
+
+    padding:14px 32px;
+
+    text-decoration:none;
+
+    color:white;
+
+    border:2px solid white;
+
+    border-radius:30px;
+
+    transition:0.3s;
+}
+
+.boton:hover{
+    background:white;
+    color:black;
+}
+
+/* PRESENTACIÓN */
+
+.presentacion{
+
+    background:#181818;
+
+    padding:60px 25px;
+}
+
+.presentacion h2{
+
+    margin-bottom:20px;
+
+    font-size:2rem;
+}
+
+.presentacion p{
+
+    line-height:1.8;
+
+    color:#ccc;
+}
+
+/* DISCIPLINAS */
+
+.disciplinas{
+
+    padding:60px 20px;
+
+    background:#111;
+}
+
+.disciplinas h2{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.tarjeta{
+
+    background:#1d1d1d;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    margin-bottom:15px;
+
+    text-align:center;
+
+    font-size:1.1rem;
+}
+
+/* FOOTER */
+
+footer{
+
+    padding:40px;
+
+    text-align:center;
+
+    color:#888;
+
+    background:#000;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <img src="fondo.webp" alt="Fabulariun">
+
+    <div class="overlay">
+
+        <h1>FABULARIUN</h1>
+
+        <p class="subtitulo">
+            Pintura · Ilustración · Diseño Gráfico ·
+            Narrativa Visual · Cómic
+        </p>
+
+        <a href="#obra" class="boton">
+            Explorar
+        </a>
+
+    </div>
+
+</section>
+
+<section class="presentacion">
+
+    <h2>Universo Creativo</h2>
+
+    <p>
+        Fabulariun reúne pintura, ilustración,
+        diseño gráfico, narrativa visual,
+        tiras cómicas y creación de cómics
+        en un único espacio.
+    </p>
+
+</section>
+
+<section id="obra" class="disciplinas">
+
+    <h2>Obra</h2>
+
+    <div class="tarjeta">🎨 Pintura</div>
+
+    <div class="tarjeta">✏️ Ilustración</div>
+
+    <div class="tarjeta">📰 Diseño Editorial</div>
+
+    <div class="tarjeta">💬 Tiras Cómicas</div>
+
+    <div class="tarjeta">📖 Cómics</div>
+
+    <div class="tarjeta">✒️ Escritura</div>
+
+</section>
+
+<footer>
+
+    © Fabulariun
+
+</footer>
+
+</body>
+</html>
