@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sala de Pintura | FABULARIUN</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#111;
+    color:#e8e1d4;
+    font-family:Georgia, serif;
+}
+
+header{
+    text-align:center;
+    padding:60px 20px;
+}
+
+h1{
+    font-weight:normal;
+    letter-spacing:3px;
+}
+
+.intro{
+    max-width:700px;
+    margin:auto;
+    color:#aaa;
+}
+
+/* GALERÍA */
+
+.galeria{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.obra img{
+    width:100%;
+    display:block;
+    border:1px solid #333;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.obra img:hover{
+    transform:scale(1.02);
+    border-color:#777;
+}
+
+/* CARTELAS */
+
+.cartela{
+    text-align:center;
+    padding:12px 5px 25px 5px;
+}
+
+.cartela h3{
+    margin:0 0 8px 0;
+    font-size:1.1rem;
+    font-weight:normal;
+}
+
+.cartela p{
+    margin:4px 0;
+    color:#999;
+    font-size:0.9rem;
+}
+
+/* VISOR */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.95);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+    flex-direction:column;
+    padding:20px;
+}
+
+.lightbox:target{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:75vh;
+    margin-bottom:20px;
+}
+
+.ficha{
+    text-align:center;
+}
+
+.ficha h2{
+    font-weight:normal;
+    margin-bottom:10px;
+}
+
+.ficha p{
+    margin:4px 0;
+    color:#ccc;
+}
+
+.cerrar{
+    margin-top:25px;
+    color:#fff;
+    text-decoration:none;
+    border:1px solid #666;
+    padding:10px 20px;
+}
+
+.cerrar:hover{
+    background:#222;
+}
+
+/* VOLVER */
+
+.volver{
+    display:block;
+    text-align:center;
+    padding:60px 20px;
+    color:#999;
+    text-decoration:none;
+}
+
+.volver:hover{
+    color:#ddd;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>SALA DE PINTURA</h1>
+
+<p class="intro">
+Selección de pinturas.
+</p>
+
+</header>
+
+<section class="galeria">
+
+<div class="obra">
+<a href="#p1">
+<img src="pinturas/pintura1.webp" alt="Mrs. Wallace">
+</a>
+<div class="cartela">
+<h3>Mrs. Wallace</h3>
+<p>Acrílico sobre lienzo</p>
+<p>50 × 40 cm · 2014</p>
+</div>
+</div>
+
+<div class="obra">
+<a href="#p2">
+<img src="pinturas/pintura2.webp" alt="Janet">
+</a>
+<div class="cartela">
+<h3>Janet</h3>
+<p>Acrílico sobre lienzo 3D</p>
+<p>20 × 20 cm · 2014</p>
+</div>
+</div>
+
+<div class="obra">
+<a href="#p3">
+<img src="pinturas/pintura3.webp" alt="Marilyn">
+</a>
+<div class="cartela">
+<h3>Marilyn</h3>
+<p>Acrílico sobre lienzo</p>
+<p>24 × 19 cm · 2014</p>
+</div>
+</div>
+
+<div class="obra">
+<a href="#p4">
+<img src="pinturas/pintura4.webp" alt="Elsa">
+</a>
+<div class="cartela">
+<h3>Elsa</h3>
+<p>Acrílico sobre lienzo</p>
+<p>30 × 24 cm · 2014</p>
+</div>
+</div>
+
+<div class="obra">
+<a href="#p5">
+<img src="pinturas/pintura5.webp" alt="Michelle">
+</a>
+<div class="cartela">
+<h3>Michelle</h3>
+<p>Acrílico sobre lienzo</p>
+<p>30 × 40 cm · 2014</p>
+</div>
+</div>
+
+<div class="obra">
+<a href="#p6">
+<img src="pinturas/pintura6.webp" alt="Keaton y Chaplin">
+</a>
+<div class="cartela">
+<h3>Keaton y Chaplin</h3>
+<p>Acrílico sobre lienzo</p>
+<p>30 × 24 cm · 2014</p>
+</div>
+</div>
+
+<div class="obra">
+<a href="#p7">
+<img src="pinturas/pintura7.webp" alt="Mathilda y Leon">
+</a>
+<div class="cartela">
+<h3>Mathilda y Leon</h3>
+<p>Acrílico sobre lienzo</p>
+<p>60 × 20 cm · 2014</p>
+</div>
+</div>
+
+</section>
+
+<a href="index.html" class="volver">
+← Volver al museo
+</a>
+
+<!-- VISORES -->
+
+<div id="p1" class="lightbox">
+<img src="pinturas/pintura1.webp">
+<div class="ficha">
+<h2>Mrs. Wallace</h2>
+<p>Acrílico sobre lienzo</p>
+<p>50 × 40 cm · 2014</p>
+</div>
+<a href="#" class="cerrar">Volver a la sala</a>
+</div>
+
+<div id="p2" class="lightbox">
+<img src="pinturas/pintura2.webp">
+<div class="ficha">
+<h2>Janet</h2>
+<p>Acrílico sobre lienzo 3D</p>
+<p>20 × 20 cm · 2014</p>
+</div>
+<a href="#" class="cerrar">Volver a la sala</a>
+</div>
+
+<div id="p3" class="lightbox">
+<img src="pinturas/pintura3.webp">
+<div class="ficha">
+<h2>Marilyn</h2>
+<p>Acrílico sobre lienzo</p>
+<p>24 × 19 cm · 2014</p>
+</div>
+<a href="#" class="cerrar">Volver a la sala</a>
+</div>
+
+<div id="p4" class="lightbox">
+<img src="pinturas/pintura4.webp">
+<div class="ficha">
+<h2>Elsa</h2>
+<p>Acrílico sobre lienzo</p>
+<p>30 × 24 cm · 2014</p>
+</div>
+<a href="#" class="cerrar">Volver a la sala</a>
+</div>
+
+<div id="p5" class="lightbox">
+<img src="pinturas/pintura5.webp">
+<div class="ficha">
+<h2>Michelle</h2>
+<p>Acrílico sobre lienzo</p>
+<p>30 × 40 cm · 2014</p>
+</div>
+<a href="#" class="cerrar">Volver a la sala</a>
+</div>
+
+<div id="p6" class="lightbox">
+<img src="pinturas/pintura6.webp">
+<div class="ficha">
+<h2>Keaton y Chaplin</h2>
+<p>Acrílico sobre lienzo</p>
+<p>30 × 24 cm · 2014</p>
+</div>
+<a href="#" class="cerrar">Volver a la sala</a>
+</div>
+
+<div id="p7" class="lightbox">
+<img src="pinturas/pintura7.webp">
+<div class="ficha">
+<h2>Mathilda y Leon</h2>
+<p>Acrílico sobre lienzo</p>
+<p>60 × 20 cm · 2014</p>
+</div>
+<a href="#" class="cerrar">Volver a la sala</a>
+</div>
+
+</body>
+</html>

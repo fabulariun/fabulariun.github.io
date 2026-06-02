@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Fabulariun</title>
+<title>FABULARIUN</title>
 
 <style>
 
@@ -15,150 +14,122 @@
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
     background:#111;
-    color:white;
+    color:#e8e1d4;
+    font-family:Georgia, serif;
+    line-height:1.6;
 }
 
-/* PORTADA */
+/* ---------- PORTADA ---------- */
 
 .hero{
-    height:100vh;
-    position:relative;
-    overflow:hidden;
-}
-
-/* Cambia esta imagen por una tuya */
-
-.hero img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    filter:brightness(50%);
-}
-
-.overlay{
-    position:absolute;
-    inset:0;
-
+    min-height:100vh;
     display:flex;
     flex-direction:column;
-
     justify-content:center;
     align-items:center;
-
     text-align:center;
-
-    padding:20px;
+    padding:40px 20px;
 }
 
 h1{
-    font-size:3rem;
-    letter-spacing:5px;
-
+    font-size:4rem;
+    font-weight:normal;
+    letter-spacing:6px;
     margin-bottom:20px;
 }
 
 .subtitulo{
-
-    font-size:1.1rem;
-
-    line-height:1.5;
-
-    max-width:300px;
-
-    margin-bottom:40px;
-
-    color:#ddd;
+    color:#bda88a;
+    font-size:1.4rem;
+    margin-bottom:30px;
 }
 
-.boton{
+.periodo{
+    color:#888;
+    letter-spacing:3px;
+    margin-bottom:40px;
+}
 
-    display:inline-block;
+.presentacion{
+    max-width:750px;
+    font-size:1.1rem;
+    color:#cfc7ba;
+}
 
-    padding:14px 32px;
+/* ---------- SALAS ---------- */
 
-    text-decoration:none;
+.contenedor{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
 
-    color:white;
+.salas{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
 
-    border:2px solid white;
-
-    border-radius:30px;
-
+.sala{
+    border:1px solid #333;
+    padding:25px;
     transition:0.3s;
 }
 
-.boton:hover{
-    background:white;
-    color:black;
+.sala:hover{
+    background:#1a1a1a;
+    border-color:#666;
+    transform:translateY(-3px);
 }
 
-/* PRESENTACIÓN */
-
-.presentacion{
-
-    background:#181818;
-
-    padding:60px 25px;
+.sala h2{
+    font-size:1.2rem;
+    font-weight:normal;
+    margin-bottom:12px;
 }
 
-.presentacion h2{
-
-    margin-bottom:20px;
-
-    font-size:2rem;
+.sala p{
+    color:#999;
+    font-size:0.95rem;
 }
 
-.presentacion p{
-
-    line-height:1.8;
-
-    color:#ccc;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-/* DISCIPLINAS */
-
-.disciplinas{
-
-    padding:60px 20px;
-
-    background:#111;
-}
-
-.disciplinas h2{
-
-    text-align:center;
-
-    margin-bottom:40px;
-}
-
-.tarjeta{
-
-    background:#1d1d1d;
-
-    padding:25px;
-
-    border-radius:15px;
-
-    margin-bottom:15px;
-
-    text-align:center;
-
-    font-size:1.1rem;
-}
-
-/* FOOTER */
+/* ---------- PIE ---------- */
 
 footer{
-
-    padding:40px;
-
     text-align:center;
+    padding:80px 20px;
+    color:#666;
+    border-top:1px solid #222;
+}
 
-    color:#888;
+footer p{
+    max-width:700px;
+    margin:auto;
+}
 
-    background:#000;
+/* ---------- MÓVIL ---------- */
+
+@media (max-width:700px){
+
+    h1{
+        font-size:2.5rem;
+        letter-spacing:3px;
+    }
+
+    .subtitulo{
+        font-size:1.1rem;
+    }
+
+    .presentacion{
+        font-size:1rem;
+    }
+
 }
 
 </style>
@@ -168,59 +139,120 @@ footer{
 
 <section class="hero">
 
-    <img src="fondo.webp" alt="Fabulariun">
+    <h1>FABULARIUN</h1>
 
-    <div class="overlay">
+    <div class="subtitulo">
+        Museo creativo personal
+    </div>
 
-        <h1>FABULARIUN</h1>
+    <div class="periodo">
+        Desde 1975
+    </div>
 
-        <p class="subtitulo">
-            Pintura · Ilustración · Diseño Gráfico ·
-            Narrativa Visual · Cómic
-        </p>
+    <div class="presentacion">
+        Un recorrido por más de cincuenta años de creación
+        gráfica, literaria y audiovisual.
 
-        <a href="#obra" class="boton">
-            Explorar
+        Este archivo reúne pinturas, ilustraciones,
+        álbumes ilustrados, libros, cómics, diseños,
+        fotografías, cortometrajes en Super 8 y videos realizadas a lo largo
+        de una vida dedicada a imaginar, dibujar,
+        escribir y filmar.
+    </div>
+
+</section>
+
+<section class="contenedor">
+
+    <div class="salas">
+
+        <a href="pintura.html">
+            <div class="sala">
+                <h2>Sala de Pintura</h2>
+                <p>Pinturas sobre lienzo y otras obras pictóricas.</p>
+            </div>
+        </a>
+
+        <a href="ilustracion.html">
+            <div class="sala">
+                <h2>Sala de Ilustración</h2>
+                <p>Ilustraciones publicadas e inéditas.</p>
+            </div>
+        </a>
+
+        <a href="albumes.html">
+            <div class="sala">
+                <h2>Sala de Álbumes Ilustrados</h2>
+                <p>Libros donde texto e imagen forman una única obra.</p>
+            </div>
+        </a>
+
+        <a href="libros.html">
+            <div class="sala">
+                <h2>Biblioteca</h2>
+                <p>Libros, novelas y otros proyectos literarios.</p>
+            </div>
+        </a>
+
+        <a href="zeus.html">
+            <div class="sala">
+                <h2>Sala Zeus</h2>
+                <p>Las aventuras del dios más problemático del Olimpo.</p>
+            </div>
+        </a>
+
+        <a href="humor.html">
+            <div class="sala">
+                <h2>Sala de Humor Gráfico</h2>
+                <p>Viñetas, sátira y observaciones dibujadas.</p>
+            </div>
+        </a>
+
+        <a href="diseno.html">
+            <div class="sala">
+                <h2>Sala de Diseño Gráfico</h2>
+                <p>Carteles, identidad visual y comunicación gráfica.</p>
+            </div>
+        </a>
+
+        <a href="editorial.html">
+            <div class="sala">
+                <h2>Hemeroteca</h2>
+                <p>Maquetación de periódicos y revistas.</p>
+            </div>
+        </a>
+
+        <a href="newwavefilms.html">
+            <div class="sala">
+                <h2>NEW WAVE FILMS</h2>
+                <p>Museo digital de los cortometrajes realizados entre 1981 y 1982.</p>
+            </div>
+        </a>
+
+        <a href="cortos.html">
+            <div class="sala">
+                <h2>Filmoteca</h2>
+                <p>Otros cortometrajes realizados en distintas épocas.</p>
+            </div>
+        </a>
+
+        <a href="fotografia.html">
+            <div class="sala">
+                <h2>Fototeca</h2>
+                <p>Archivo fotográfico.</p>
+            </div>
         </a>
 
     </div>
 
 </section>
 
-<section class="presentacion">
-
-    <h2>Universo Creativo</h2>
-
-    <p>
-        Fabulariun reúne pintura, ilustración,
-        diseño gráfico, narrativa visual,
-        tiras cómicas y creación de cómics
-        en un único espacio.
-    </p>
-
-</section>
-
-<section id="obra" class="disciplinas">
-
-    <h2>Obra</h2>
-
-    <div class="tarjeta">🎨 Pintura</div>
-
-    <div class="tarjeta">✏️ Ilustración</div>
-
-    <div class="tarjeta">📰 Diseño Editorial</div>
-
-    <div class="tarjeta">💬 Tiras Cómicas</div>
-
-    <div class="tarjeta">📖 Cómics</div>
-
-    <div class="tarjeta">✒️ Escritura</div>
-
-</section>
-
 <footer>
 
-    © Fabulariun
+    <p>
+        Archivo digital de una vida dedicada a imaginar,
+        dibujar, escribir y filmar.
+    </p>
 
 </footer>
 
