@@ -82,6 +82,42 @@ h1{
     color:#ddd;
 }
 
+/* VISOR */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.95);
+    z-index:999;
+}
+
+.lightbox:target{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:90vh;
+    display:block;
+}
+
+.cerrar{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    text-decoration:none;
+    font-size:2.5rem;
+    line-height:1;
+}
+
+.cerrar:hover{
+    color:#ccc;
+}
+
 </style>
 
 </head>
@@ -101,9 +137,7 @@ Selección de pinturas.
 <section class="galeria">
 
 <div class="obra">
-<a href="pinturas/pintura1.webp" target="_blank">
-<img src="pinturas/pintura1.webp" alt="Mrs. Wallace">
-</a>
+<a href="#p1"><img src="pinturas/pintura1.webp" alt="Mrs. Wallace"></a>
 <div class="cartela">
 <h3>Mrs. Wallace</h3>
 <p>Acrílico sobre lienzo</p>
@@ -112,9 +146,7 @@ Selección de pinturas.
 </div>
 
 <div class="obra">
-<a href="pinturas/pintura2.webp" target="_blank">
-<img src="pinturas/pintura2.webp" alt="Janet">
-</a>
+<a href="#p2"><img src="pinturas/pintura2.webp" alt="Janet"></a>
 <div class="cartela">
 <h3>Janet</h3>
 <p>Acrílico sobre lienzo 3D</p>
@@ -123,9 +155,7 @@ Selección de pinturas.
 </div>
 
 <div class="obra">
-<a href="pinturas/pintura3.webp" target="_blank">
-<img src="pinturas/pintura3.webp" alt="Marilyn">
-</a>
+<a href="#p3"><img src="pinturas/pintura3.webp" alt="Marilyn"></a>
 <div class="cartela">
 <h3>Marilyn</h3>
 <p>Acrílico sobre lienzo</p>
@@ -134,9 +164,7 @@ Selección de pinturas.
 </div>
 
 <div class="obra">
-<a href="pinturas/pintura4.webp" target="_blank">
-<img src="pinturas/pintura4.webp" alt="Elsa">
-</a>
+<a href="#p4"><img src="pinturas/pintura4.webp" alt="Elsa"></a>
 <div class="cartela">
 <h3>Elsa</h3>
 <p>Acrílico sobre lienzo</p>
@@ -145,9 +173,7 @@ Selección de pinturas.
 </div>
 
 <div class="obra">
-<a href="pinturas/pintura5.webp" target="_blank">
-<img src="pinturas/pintura5.webp" alt="Michelle">
-</a>
+<a href="#p5"><img src="pinturas/pintura5.webp" alt="Michelle"></a>
 <div class="cartela">
 <h3>Michelle</h3>
 <p>Acrílico sobre lienzo</p>
@@ -156,9 +182,7 @@ Selección de pinturas.
 </div>
 
 <div class="obra">
-<a href="pinturas/pintura6.webp" target="_blank">
-<img src="pinturas/pintura6.webp" alt="Keaton y Chaplin">
-</a>
+<a href="#p6"><img src="pinturas/pintura6.webp" alt="Keaton y Chaplin"></a>
 <div class="cartela">
 <h3>Keaton y Chaplin</h3>
 <p>Acrílico sobre lienzo</p>
@@ -167,9 +191,7 @@ Selección de pinturas.
 </div>
 
 <div class="obra">
-<a href="pinturas/pintura7.webp" target="_blank">
-<img src="pinturas/pintura7.webp" alt="Mathilda y Leon">
-</a>
+<a href="#p7"><img src="pinturas/pintura7.webp" alt="Mathilda y Leon"></a>
 <div class="cartela">
 <h3>Mathilda y Leon</h3>
 <p>Acrílico sobre lienzo</p>
@@ -182,6 +204,43 @@ Selección de pinturas.
 <a href="index.html" class="volver">
 ← Volver al museo
 </a>
+
+<!-- VISORES -->
+
+<div id="p1" class="lightbox">
+<a href="#" class="cerrar">✕</a>
+<img src="pinturas/pintura1.webp" alt="Mrs. Wallace">
+</div>
+
+<div id="p2" class="lightbox">
+<a href="#" class="cerrar">✕</a>
+<img src="pinturas/pintura2.webp" alt="Janet">
+</div>
+
+<div id="p3" class="lightbox">
+<a href="#" class="cerrar">✕</a>
+<img src="pinturas/pintura3.webp" alt="Marilyn">
+</div>
+
+<div id="p4" class="lightbox">
+<a href="#" class="cerrar">✕</a>
+<img src="pinturas/pintura4.webp" alt="Elsa">
+</div>
+
+<div id="p5" class="lightbox">
+<a href="#" class="cerrar">✕</a>
+<img src="pinturas/pintura5.webp" alt="Michelle">
+</div>
+
+<div id="p6" class="lightbox">
+<a href="#" class="cerrar">✕</a>
+<img src="pinturas/pintura6.webp" alt="Keaton y Chaplin">
+</div>
+
+<div id="p7" class="lightbox">
+<a href="#" class="cerrar">✕</a>
+<img src="pinturas/pintura7.webp" alt="Mathilda y Leon">
+</div>
 
 </body>
 </html>
